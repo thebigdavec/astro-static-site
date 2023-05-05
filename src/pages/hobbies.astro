@@ -1,15 +1,16 @@
 ---
-import MainTemplate from '../layout/MainTemplate.astro'
-const pageTitle = 'Hobbies'
+import MainLayout from '../layouts/MainLayout.astro'
+const hobbies = [
+  'Software development',
+  'Music',
+  'Photography',
+  'Comedy',
+  'Art'
+]
 ---
 
-<MainTemplate {pageTitle}>
-  <h1>{pageTitle}</h1>
+<MainLayout pageTitle="Hobbies">
   <ul>
-    <li>Software development</li>
-    <li>Music</li>
-    <li>Photography</li>
-    <li>Comedy</li>
-    <li>Art</li>
+    {hobbies.map(hobby => <li>{hobby}</li>)}
   </ul>
-</MainTemplate>
+</MainLayout>

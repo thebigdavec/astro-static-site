@@ -1,7 +1,8 @@
 ---
 import '../styles/global.css'
 import MainNav from './MainNav.astro'
-const pageTitle = 'Home'
+const { pageTitle } = Astro.props
+const title = [pageTitle, 'Astro'].filter(Boolean).join(' | ')
 ---
 
 <html lang="en">
@@ -10,10 +11,11 @@ const pageTitle = 'Home'
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{Astro.props.pageTitle || 'Astro'}</title>
+    <title>{title}</title>
   </head>
   <body>
     <MainNav />
+    {pageTitle && <h1>{pageTitle}</h1>}
     <slot />
   </body>
 </html>

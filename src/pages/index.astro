@@ -1,8 +1,7 @@
 ---
-import MainTemplate from '../layout/MainTemplate.astro'
-const pageTitle = 'Home'
+import MainLayout from '../layouts/MainLayout.astro'
 ---
 
-<MainTemplate {pageTitle}>
-  <h1>{pageTitle}</h1>
-</MainTemplate>
+<MainLayout pageTitle="Landing Page">
+  <p>Here we are, at the start of a magnificent journey.</p>
+</MainLayout>
