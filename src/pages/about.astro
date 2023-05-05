@@ -1,12 +1,9 @@
 ---
-import '../styles/global.css'
+import MainTemplate from '../layout/MainTemplate.astro'
 const pageTitle = 'Who Am I?'
 ---
 
-<body>
-  <a href="/">Home</a>
-  <a href="/about" class="current">About</a>
-  <a href="/hobbies">Hobbies</a>
+<MainTemplate {pageTitle}>
   <h1>{pageTitle}</h1>
   <p>
     My name is Dave Collison and I built my third Astro project using <a
@@ -15,4 +12,4 @@ const pageTitle = 'Who Am I?'
       ceos3c.com!
     </a>
   </p>
-</body>
+</MainTemplate>

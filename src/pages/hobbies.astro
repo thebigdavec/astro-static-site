@@ -1,12 +1,9 @@
 ---
-import '../styles/global.css'
+import MainTemplate from '../layout/MainTemplate.astro'
 const pageTitle = 'Hobbies'
 ---
 
-<body>
-  <a href="/">Home</a>
-  <a href="/about">About</a>
-  <a href="/hobbies" class="current">Hobbies</a>
+<MainTemplate {pageTitle}>
   <h1>{pageTitle}</h1>
   <ul>
     <li>Software development</li>
@@ -15,4 +12,4 @@ const pageTitle = 'Hobbies'
     <li>Comedy</li>
     <li>Art</li>
   </ul>
-</body>
+</MainTemplate>
