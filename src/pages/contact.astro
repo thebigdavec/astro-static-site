@@ -1,0 +1,64 @@
+---
+import MainLayout from '../layouts/MainLayout.astro'
+---
+
+<MainLayout pageTitle="Contact Me">
+  <p>It would be very nice to hear from you.</p>
+  <small class="text-gray-500">If only this form were functional.</small>
+  <form action="">
+    <div class="form-fields-flex">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" class="border" required />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" class="border" required />
+      </div>
+    </div>
+    <div>
+      <label for="message">Message</label>
+      <textarea
+        name="message"
+        id="message"
+        cols="30"
+        rows="10"
+        class="border"
+        max-w-md
+        required>
+      </textarea>
+    </div>
+    <button type="submit" class="border primary">Send</button>
+  </form>
+  <style>
+    form {
+      margin-block-start: 2rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      max-width: 500px;
+    }
+    .form-fields-flex {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .border {
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+    button.primary {
+      background-color: var(--color-primary);
+      color: white;
+      width: fit-content;
+      margin-inline-start: auto;
+    }
+    button.border {
+      padding-inline: 2rem;
+    }
+  </style>
+</MainLayout>

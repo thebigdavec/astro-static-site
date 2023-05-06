@@ -1,6 +1,8 @@
 ---
+import MainNav from '../components/MainNav.astro'
+import TheFooter from '../components/TheFooter.astro'
 import '../styles/global.css'
-import MainNav from './MainNav.astro'
+
 const { pageTitle } = Astro.props
 const title = [pageTitle, 'Astro'].filter(Boolean).join(' | ')
 ---
@@ -15,7 +17,23 @@ const title = [pageTitle, 'Astro'].filter(Boolean).join(' | ')
   </head>
   <body>
     <MainNav />
-    {pageTitle && <h1>{pageTitle}</h1>}
-    <slot />
+    <div class="content">
+      {pageTitle && <h1 class="text-4xl mb-10">{pageTitle}</h1>}
+      <slot />
+    </div><select name="" id="" disabled="disabled"></select>
+    <TheFooter />
   </body>
 </html>
+<style>
+  body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+  .content {
+    display: grid;
+    width: clamp(300px, 100%, 1200px);
+    margin-inline: auto;
+    align-content: start;
+  }
+</style>
