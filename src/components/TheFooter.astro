@@ -5,19 +5,17 @@ const year = new Date().getFullYear()
 <footer>
   <span class="text-white">
     © {year}
-    <a href="https://davecollison.dev" target="_blank" class="hover:underline">
-      Dave Collison
-    </a>
+    <a href="https://davecollison.dev" target="_blank">Dave Collison</a>
   </span>
   <ul class="flex flex-wrap items-center gap-x-5 text-white h-20">
     <li>
-      <a href="/about" class="hover:underline">About</a>
+      <a href="/about">About</a>
     </li>
     <li>
-      <a href="/privacy-policy" class="hover:underline">Privacy Policy</a>
+      <a href="/privacy-policy">Privacy Policy</a>
     </li>
     <li>
-      <a href="/contact" class="hover:underline">Contact</a>
+      <a href="/contact">Contact</a>
     </li>
   </ul>
 </footer>
@@ -30,5 +28,16 @@ const year = new Date().getFullYear()
     justify-content: space-between;
     align-items: center;
     margin-top: 3rem;
+  }
+  li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.25s ease-in;
+  }
+  li a:hover,
+  li a:focus-visible {
+    transition: color 0.1s ease-out;
+    text-decoration: underline;
+    color: orange;
   }
 </style>

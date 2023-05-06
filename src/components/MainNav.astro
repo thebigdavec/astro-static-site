@@ -1,13 +1,13 @@
 <nav>
   <ul>
     <li>
-      <a href="/" class="text-white hover:text-orange-400">Home</a>
+      <a href="/">Home</a>
     </li>
     <li>
-      <a href="/about" class="text-white hover:text-orange-400">About</a>
+      <a href="/about">About</a>
     </li>
     <li>
-      <a href="/hobbies" class="text-white hover:text-orange-400">Hobbies</a>
+      <a href="/hobbies">Hobbies</a>
     </li>
   </ul>
 </nav>
@@ -22,5 +22,15 @@
     display: flex;
     justify-content: flex-end;
     gap: 1em;
+  }
+  li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.25s ease-in;
+  }
+  li a:hover,
+  li a:focus-visible {
+    transition: color 0.1s ease-out;
+    color: orange;
   }
 </style>

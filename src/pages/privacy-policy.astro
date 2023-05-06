@@ -4,5 +4,21 @@ import MainLayout from '../layouts/MainLayout.astro'
 
 <MainLayout pageTitle="Privacy Policy">
   <p>None of your business.</p>
-  <a href="/" class="text-blue-500 hover:underline">Take me home</a>
+  <a href="/" class="link">Take me home</a>
 </MainLayout>
+<style>
+  a.link {
+    text-decoration: none;
+    color: var(--color-primary);
+    transition: color 0.25s ease-in;
+  }
+  a.link:hover,
+  a.link:focus-visible {
+    transition: color 0.1s ease-out;
+    text-decoration: underline;
+    color: var(--color-primary-hover);
+  }
+  a.link:active {
+    text-underline-offset: 0.2em;
+  }
+</style>

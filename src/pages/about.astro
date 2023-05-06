@@ -4,10 +4,29 @@ import MainLayout from '../layouts/MainLayout.astro'
 
 <MainLayout pageTitle="Who Am I?">
   <p>
-    My name is Dave Collison and I built my third Astro project using <a
+    My name is <a href="https://davecollison.dev" target="_blank" class="link">
+      Dave Collison
+    </a> and I built my third Astro project using <a
       href="https://www.ceos3c.com"
-      target="_blank">
+      target="_blank"
+      class="link">
       ceos3c.com!
     </a>
   </p>
 </MainLayout>
+<style>
+  a.link {
+    text-decoration: none;
+    color: var(--color-primary);
+    transition: color 0.25s ease-in;
+  }
+  a.link:hover,
+  a.link:focus-visible {
+    transition: color 0.1s ease-out;
+    text-decoration: underline;
+    color: var(--color-primary-hover);
+  }
+  a.link:active {
+    text-underline-offset: 0.2em;
+  }
+</style>
