@@ -18,6 +18,9 @@ body {
   color: var(--color-foreground);
   background-color: var(--color-background);
 }
+.dark {
+  color: var(--color-background);
+}
 
 a {
   text-decoration: none;
