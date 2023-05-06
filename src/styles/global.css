@@ -18,3 +18,29 @@ body {
   color: var(--color-foreground);
   background-color: var(--color-background);
 }
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+  transition: color 0.25s ease-in;
+}
+a:hover,
+a:focus-visible {
+  transition: color 0.1s ease-out;
+  text-decoration: underline;
+  color: var(--color-primary-hover);
+}
+a:active {
+  text-underline-offset: 0.2em;
+}
+.dark a {
+  color: var(--color-background);
+}
+ul {
+  list-style: none;
+}
+ul.nav-flex {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1em;
+}
