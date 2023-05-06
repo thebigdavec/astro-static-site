@@ -31,7 +31,7 @@ a:focus-visible {
   color: var(--color-primary-hover);
 }
 a:active {
-  text-underline-offset: 0.2em;
+  color: var(--color-primary);
 }
 .dark a {
   color: var(--color-background);

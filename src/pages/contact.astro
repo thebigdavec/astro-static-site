@@ -3,8 +3,10 @@ import MainLayout from '../layouts/MainLayout.astro'
 ---
 
 <MainLayout pageTitle="Contact Me">
-  <p>It would be very nice to hear from you.</p>
-  <small>If only this form were functional.</small>
+  <div>
+    <p>It would be very nice to hear from you.</p>
+    <small>If only this form were functional.</small>
+  </div>
   <form action="">
     <div class="form-fields-flex">
       <div>
@@ -30,38 +32,39 @@ import MainLayout from '../layouts/MainLayout.astro'
     </div>
     <button type="submit" class="border primary">Send</button>
   </form>
-  <style>
-    form {
-      margin-block-start: 2rem;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      max-width: 500px;
-    }
-    .form-fields-flex {
-      display: flex;
-      width: 100%;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .border {
-      padding: 0.5rem;
-      border-radius: 0.25rem;
-      border: 1px solid #ccc;
-      width: 100%;
-    }
-    button.primary {
-      background-color: var(--color-primary);
-      color: white;
-      width: fit-content;
-      margin-inline-start: auto;
-    }
-    button.border {
-      padding-inline: 2rem;
-    }
-    small {
-      opacity: 0.5;
-    }
-  </style>
 </MainLayout>
+
+<style>
+  form {
+    margin-block-start: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 500px;
+  }
+  .form-fields-flex {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .border {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  button.primary {
+    background-color: var(--color-primary);
+    color: white;
+    width: fit-content;
+    margin-inline-start: auto;
+  }
+  button.border {
+    padding-inline: 2rem;
+  }
+  small {
+    opacity: 0.5;
+  }
+</style>
